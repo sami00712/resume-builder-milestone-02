@@ -40,10 +40,10 @@ const Preview = () => {
     }
   };
   return (
-    <div className="md:p-8 max-w-3xl mx-auto p-4">
+    <div className="md:p-8 max-w-2xl mx-auto p-4">
       <div className="flex border rounded-lg" id="resume-preview">
         {/* Left Side: Profile Info */}
-        <div className="w-1/3 p-4 bg-sky-400 rounded-l-lg space-y-4">
+        <div className="w-1/2 p-1 bg-sky-400 rounded-l-lg space-y-4">
           {resumeData.profileImage && (
             <img
               src={resumeData.profileImage}
@@ -69,12 +69,12 @@ const Preview = () => {
         </div>
 
         {/* Right Side: Resume Details */}
-        <div className="w-2/3 p-6">
+        <div className="w-4/5 p-3">
           <div className="mb-6">
             <h2 className="text-lg font-semibold text-gray-700 mb-2">Experience</h2>
             {resumeData.experiences.map((experience: any, index: number) => (
               <div key={index} className="space-y-2">
-                <div className="flex items-center">
+                <div className="block md:flex items-center">
                   <h3 className="text-md font-bold">{experience.title}</h3>
                   <p className="text-gray-500 text-xs ml-auto">
                     {experience.startDate} -- {experience.endDate}
@@ -89,7 +89,7 @@ const Preview = () => {
             <h2 className="text-lg font-semibold text-gray-700 mb-2">Education</h2>
             {resumeData.educations.map((education: any, index: number) => (
               <div key={index} className="space-y-2">
-                <div className=" flex items-center">
+                <div className="block  md:flex items-center">
                   <h3 className="text-md font-bold">{education.degree}</h3>
                   <p className="text-gray-500 text-xs ml-auto">
                     {education.startDate} -- {education.endDate}
